@@ -1,0 +1,11 @@
+p {
+  color: yellowgreen;
+}
+
+.error {
+  border-color: red;
+}
+
+.success {
+  border-color: green;
+}
