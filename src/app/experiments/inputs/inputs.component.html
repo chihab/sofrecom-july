@@ -1,0 +1,18 @@
+{{ parentDate }}
+<app-date-picker
+  (edit)="onChange('dd', $event)"
+  [format]="'dd/mm/yyyy'"
+  [currentDate]="parentDate"
+/>
+
+<!-- const appDatePicker = new DatePickerComponent();
+appDatePicker.format = 'dd/mm/yyyy';
+appDatePicker.currentDate = this.parentDate; -->
+<!-- <hr /> -->
+<!-- <app-date-picker [format]="'dd/mm/yyyy'" [currentDate]="anotherDate" /> -->
+<!-- const appDatePicker = new DatePickerComponent();
+appDatePicker.format = 'dd/mm/yyyy';
+appDatePicker.currentDate = this.parentDate; -->
+
+<img src="{{ imageUrl }}" />
+<img [src]="imageUrl" />

@@ -1,33 +1,5 @@
-<h1>{{ title }}</h1>
+<!-- Experiments -->
+<!-- <app-inputs /> -->
 
-<div id="myDiv"></div>
-
-<button (click)="onClick()">+1</button>
-
-<div *ngIf="isLoading; else userData">Loading...</div>
-
-<ng-template #userData> Data </ng-template>
-
-@for (user of users; track user.id) {
-{{ user.firstName }}
-{{ user.age }}
-}
-
-<p>
-  {{ getCounter() }}
-</p>
-
-<!-- @if(counter > 0) { -->
-
-<input type="text" id="datepicker" #date />
-
-<button [ngStyle]="buttonStyle" (click)="myInput.focus()">Focus</button>
-<input [ngClass]="inputClass" type="text" #myInput />
-
-<img src="http://myserver/img{{ getCounter() }}.png" />
-<img [src]="'http://myserver/img' + counter + '.png'" />
-
-<img src="{{ counter }}" />
-
-<app-users #appUsers />
-<!-- }  -->
+<!-- Workshops -->
+<app-workshop04 />

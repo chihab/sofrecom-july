@@ -1,0 +1,20 @@
+@if(isError) {
+<app-alert />
+} FirstName
+<input type="text" #firstName />
+
+LastName
+<input type="text" #lastName />
+
+Email
+<input type="text" #email />
+
+<button (click)="addUser(firstName.value, lastName.value, email.value)">
+  Add User
+</button>
+
+<ul>
+  @for(user of users; track user.email) {
+  <li>{{ user.firstName }} {{ user.lastName }} - {{ user.email }}</li>
+  }
+</ul>
