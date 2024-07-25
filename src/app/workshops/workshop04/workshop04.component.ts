@@ -13,16 +13,21 @@ import { InputsComponent } from '../../experiments/inputs/inputs.component';
 })
 export class Workshop04Component {
   users: User[] = [];
-  isError = false;
+  isError = true;
+  message = '';
   addUser(firstName: string, lastName: string, email: string) {
+    this.isError = false;
     if (!firstName || !lastName || !email) {
       this.isError = true;
+      this.message = 'Please fill in all fields';
       return;
     }
     if (this.users.length === 5) {
       this.isError = true;
+      this.message = 'You can only add 5 users';
       return;
     }
     this.users.push({ firstName, lastName, email });
+    this.message = 'User added successfully';
   }
 }

@@ -1,1 +1,1 @@
-<p>Maximum number of items reached or invalid input.</p>
+<p [ngClass]="{ error: isError, success: !isError }">{{ message }}</p>

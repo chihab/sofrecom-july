@@ -1,6 +1,5 @@
-@if(isError) {
-<app-alert />
-} FirstName
+@if(isError) { } FirstName
+<app-alert [isError]="isError" [message]="message" />
 <input type="text" #firstName />
 
 LastName
