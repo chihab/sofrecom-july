@@ -1,5 +1,5 @@
 import { NgClass, NgIf, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AlertComponent } from '../../ui/alert/alert.component';
 import { User } from '../../core/models/user.model';
 import { InputsComponent } from '../../experiments/inputs/inputs.component';
@@ -8,6 +8,9 @@ import {
   UserFormComponent,
 } from '../../core/components/user-form/user-form.component';
 import { UsersComponent } from '../../core/components/users/users.component';
+import { Workshop05Service } from './services/workshop05.service';
+import { UserService } from '../../services/user.service';
+import { LogService } from '../../services/log.service';
 
 @Component({
   selector: 'app-workshop05',
@@ -21,6 +24,14 @@ import { UsersComponent } from '../../core/components/users/users.component';
     UserFormComponent,
     UsersComponent,
   ],
+  providers: [
+    Workshop05Service,
+    UserService,
+    {
+      provide: LogService,
+      useFactory: () => {},
+    },
+  ],
   templateUrl: './workshop05.component.html',
   styleUrl: './workshop05.component.css',
 })
@@ -28,6 +39,8 @@ export class Workshop05Component {
   users: User[] = [];
   isError = true;
   message = '';
+  workshop05Service = inject(Workshop05Service);
+  userService = inject(UserService);
   addUser(user: UserEdit) {
     this.isError = false;
     if (!user.firstName || !user.lastName || !user.email) {
