@@ -1,17 +1,6 @@
 @if(isError) { } FirstName
 <app-alert [isError]="isError" [message]="message" />
-<input type="text" #firstName />
-
-LastName
-<input type="text" #lastName />
-
-Email
-<input type="text" #email />
-
-<button (click)="addUser(firstName.value, lastName.value, email.value)">
-  Add User
-</button>
-
+<app-user-form (edit)="addUser($event)" />
 <ul>
   @for(user of users; track user.email) {
   <li>{{ user.firstName }} {{ user.lastName }} - {{ user.email }}</li>

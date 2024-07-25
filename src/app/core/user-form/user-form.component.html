@@ -1,0 +1,13 @@
+<form>
+  <input type="text" #firstName />
+
+  LastName
+  <input type="text" #lastName />
+
+  Email
+  <input type="text" #email />
+
+  <button (click)="onSubmit(firstName.value, lastName.value, email.value)">
+    Add User
+  </button>
+</form>
