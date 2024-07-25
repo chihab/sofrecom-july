@@ -1,8 +1,7 @@
-<h1>List of users</h1>
-<div><app-user /></div>
-<!-- appUser = new UserComponent(), render(appUser.html) -->
-<div><app-user /></div>
-<div><app-user /></div>
-<div><app-user /></div>
-<div><app-user /></div>
-<div><app-user /></div>
+<ul>
+  @for(user of users; track user.email) {
+  <li>
+    <app-user [user]="user" />
+  </li>
+  }
+</ul>

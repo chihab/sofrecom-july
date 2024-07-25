@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UserComponent } from '../user/user.component';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -8,4 +9,7 @@ import { UserComponent } from '../user/user.component';
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
 })
-export class UsersComponent {}
+export class UsersComponent {
+  @Input()
+  users: User[] = [];
+}
