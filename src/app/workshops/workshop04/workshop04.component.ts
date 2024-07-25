@@ -6,7 +6,7 @@ import { InputsComponent } from '../../experiments/inputs/inputs.component';
 import {
   UserEdit,
   UserFormComponent,
-} from '../../core/user-form/user-form.component';
+} from '../../core/components/user-form/user-form.component';
 
 @Component({
   selector: 'app-workshop04',
