@@ -13,15 +13,32 @@ export class HttpComponent {
   // data: any = { title: '' }; // undefined
   data: any = { title: '' }; // undefined
   constructor() {
-    // fetch('https://jsonplaceholder.typicode.com/todos/1')
+    // this.getUsers();
+    // setInterval(() => {
+    // GET, POST, PUT, DELETE
+    // this.loading = true;
+    // const callback = (data) => {
+    //   this.data = data;
+    //   console.log(data);
+    // };
+
+    // callback({ title: 'Hello' });
+    this.http.get('https://jsonplaceholder.typicode.com/todoss/1').subscribe({
+      next: (data) => {
+        this.data = data;
+        console.log(data);
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+
+    // const promise = fetch('https://jsonplaceholder.typicode.com/todos/2');
+    // promise
     //   .then((response) => response.json())
-    //   .then((json) => (this.data = json));
-    setInterval(() => {
-      this.http
-        .get('https://jsonplaceholder.typicode.com/todos/1')
-        .subscribe((data) => {
-          this.data = data;
-        });
-    }, 2000);
+    //   .then((json) => {
+    //     console.log(json);
+    //   });
+    // console.log('getUsers');
   }
 }
