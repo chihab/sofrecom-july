@@ -1,4 +1,7 @@
+{{ currentDate | date : "dd/MM/yyyy" }}
+
 {{ parentDate }}
+
 <app-date-picker
   (edit)="onChange('dd', $event)"
   [format]="'dd/mm/yyyy'"
