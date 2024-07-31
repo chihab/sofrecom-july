@@ -9,9 +9,20 @@ import { RouterLink } from '@angular/router';
   styleUrl: './users.component.css',
 })
 export class UsersComponent {
-  @Input() id = '';
+  _id = '';
+
+  @Input()
+  set id(value: string) {
+    this._id = value;
+  }
 
   fetchUser() {
-    console.log('fetching user with id', this.id);
+    console.log('fetching user with id', this._id);
   }
 }
+
+// users = new UsersComponent();
+// users.id = '123';
+// users.id = '20'
+
+// read users.id
