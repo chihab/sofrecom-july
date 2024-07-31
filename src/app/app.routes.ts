@@ -1,24 +1,24 @@
 import { Routes } from '@angular/router';
 import { Workshop08Component } from './workshops/workshop08/workshop08.component';
-import { Workshop09Component } from './workshops/workshop09/workshop09.component';
-import { UsersComponent } from './experiments/router/users/users.component';
+import { Workshop10Component } from './workshops/workshop10/workshop10.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/workshop08',
+    redirectTo: '/admin',
     pathMatch: 'full',
   },
   {
-    path: 'users/:id',
-    component: UsersComponent,
-  },
-  {
-    path: 'workshop08',
+    path: 'admin',
     component: Workshop08Component,
   },
   {
-    path: 'workshop09',
-    component: Workshop09Component,
+    path: 'dashboard',
+    component: Workshop10Component,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];

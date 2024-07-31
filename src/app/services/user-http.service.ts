@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { tap, map, Observable } from 'rxjs';
 import { User } from '../core/models/user.model';
 
 @Injectable({
@@ -10,11 +10,17 @@ export class UserService {
   httpClient = inject(HttpClient);
 
   getUsers(): Observable<User[]> {
-    return this.httpClient.get<User[]>('http://localhost:3000/users');
+    return this.httpClient
+      .get<User[]>('http://localhost:3000/users')
+      .pipe(map((users) => users.filter((user) => user.firstName != 'dsfsdf')));
   }
 
   addUser(user: User): Observable<User> {
     return this.httpClient.post<User>('http://localhost:3000/users', user);
+  }
+
+  getUsersCount(): Observable<number> {
+    return this.getUsers().pipe(map((users) => users.length));
   }
 
   //   getUser() {

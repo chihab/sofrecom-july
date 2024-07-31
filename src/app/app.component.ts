@@ -8,27 +8,29 @@ import { HttpComponent } from './experiments/http/http.component';
 import { Workshop08Component } from './workshops/workshop08/workshop08.component';
 import { Workshop09Component } from './workshops/workshop09/workshop09.component';
 import { RouterComponent } from './experiments/router/router.component';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './ui/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    InputsComponent,
-    Workshop04Component,
-    Workshop05Component,
-    DiComponent,
-    Workshop06Component,
-    HttpComponent,
-    Workshop08Component,
-    Workshop09Component,
-    RouterComponent,
+    // InputsComponent,
+    // Workshop04Component,
+    // Workshop05Component,
+    // DiComponent,
+    // Workshop06Component,
+    // HttpComponent,
+    // Workshop08Component,
+    // Workshop09Component,
+    // RouterComponent,
+    RouterOutlet,
+    NavbarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  getUsers() {}
-}
+export class AppComponent {}
 
 // Unit Test
 // const app = new AppComponent();
