@@ -5,6 +5,11 @@ import { UsersComponent } from './experiments/router/users/users.component';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/workshop08',
+    pathMatch: 'full',
+  },
+  {
     path: 'users/:id',
     component: UsersComponent,
   },
