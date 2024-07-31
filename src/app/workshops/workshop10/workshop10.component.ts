@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { UserService } from '../../services/user-http.service';
 
 @Component({
@@ -9,11 +9,11 @@ import { UserService } from '../../services/user-http.service';
   styleUrl: './workshop10.component.css',
 })
 export class Workshop10Component {
+  @Input() usersCount = 0;
   userService = inject(UserService);
-  userCount = 0;
-  constructor() {
-    this.userService.getUsersCount().subscribe((userCount) => {
-      this.userCount = userCount;
-    });
-  }
+  // constructor() {
+  //   this.userService.getUsersCount().subscribe((userCount) => {
+  //     this.userCount = userCount;
+  //   });
+  // }
 }

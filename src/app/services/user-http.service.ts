@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { tap, map, Observable } from 'rxjs';
+import { tap, map, Observable, delay } from 'rxjs';
 import { User } from '../core/models/user.model';
 
 @Injectable({
@@ -20,9 +20,11 @@ export class UserService {
   }
 
   getUsersCount(): Observable<number> {
-    return this.getUsers().pipe(map((users) => users.length));
+    return this.getUsers().pipe(
+      delay(5000),
+      map((users) => users.length)
+    );
   }
-
   //   getUser() {
   //     this.httpClient.get('http://localhost:3000/users/1')
   //   }
