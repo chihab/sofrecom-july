@@ -6,6 +6,7 @@ import { Workshop05Component } from './workshops/workshop05/workshop05.component
 import { Workshop06Component } from './workshops/workshop06/workshop06.component';
 import { HttpComponent } from './experiments/http/http.component';
 import { Workshop08Component } from './workshops/workshop08/workshop08.component';
+import { Workshop09Component } from './workshops/workshop09/workshop09.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { Workshop08Component } from './workshops/workshop08/workshop08.component
     Workshop06Component,
     HttpComponent,
     Workshop08Component,
+    Workshop09Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
