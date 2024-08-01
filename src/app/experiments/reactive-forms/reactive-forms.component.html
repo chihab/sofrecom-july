@@ -1,0 +1,50 @@
+{{ rendering() }}
+<form [formGroup]="formGroup">
+  <!-- <div class="mb-3">
+    <label for="firstName" class="form-label">First Name</label>
+    <input
+      formControlName="firstName"
+      type="text"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      required
+      pattern="[a-zA-Z]+"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input
+      formControlName="lastName"
+      type="text"
+      class="form-control"
+      id="lastName"
+      name="lastName"
+      required
+      pattern="[a-zA-Z]+"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      formControlName="email"
+    />
+  </div> -->
+  <input type="date" formControlName="date" class="form-control" />
+  @if(formGroup.controls['date'] &&
+  formGroup.controls['date'].hasError('isYoung')) {
+  <div class="form-text">Too young</div>
+  } @if(formGroup.controls['date'] &&
+  formGroup.controls['date'].hasError('isOlderThanNow')) {
+  <div class="form-text">Date must be in the past</div>
+  }
+
+  <button class="btn btn-primary" [disabled]="formGroup.invalid">
+    Validate
+  </button>
+  <button type="reset" class="btn btn-secondary">Reset</button>
+</form>

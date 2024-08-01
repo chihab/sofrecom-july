@@ -13,6 +13,7 @@ import { CustomDirectivesComponent } from './experiments/custom-directives/custo
 import { Workshop13Component } from './workshops/workshop13/workshop13.component';
 import { NavbarComponent } from './ui/components/navbar/navbar.component';
 import { TemplateFormsComponent } from './experiments/template-forms/template-forms.component';
+import { ReactiveFormsComponent } from './experiments/reactive-forms/reactive-forms.component';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,7 @@ import { TemplateFormsComponent } from './experiments/template-forms/template-fo
     CustomDirectivesComponent,
     Workshop13Component,
     TemplateFormsComponent,
+    ReactiveFormsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

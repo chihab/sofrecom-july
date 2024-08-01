@@ -40,7 +40,6 @@ export class Workshop14Component {
   }
 
   addUser(user: UserEdit) {
-    // this.loading = true;
     try {
       this.userService.addUser(user).subscribe(() => {
         this.userService.getUsers().subscribe((users) => {
