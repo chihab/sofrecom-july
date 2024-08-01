@@ -1,0 +1,24 @@
+<form #form="ngForm">
+  <input
+    name="input1"
+    [(ngModel)]="value1"
+    pattern="[0-9]+"
+    #ngModel="ngModel"
+  />
+  <input name="input2" [(ngModel)]="value2" required #ngModel="ngModel" />
+  {{ ngModel.valid }}
+  {{ ngModel.pristine }}
+  {{ ngModel.touched }}
+  <button
+    [disabled]="form.controls['input1'] ? form.controls['input1'].valid : false"
+  >
+    Submit
+  </button>
+</form>
+
+<!-- <input [ngModel]="value" (ngModelChange)="value = $event" />
+{{ value }} -->
+
+<!-- <input [appModel]="value" (appModelChange)="value = $event" />
+<input [(appModel)]="value" />
+{{ value }} -->

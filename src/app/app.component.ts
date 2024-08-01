@@ -12,6 +12,7 @@ import { RouterOutlet } from '@angular/router';
 import { CustomDirectivesComponent } from './experiments/custom-directives/custom-directives.component';
 import { Workshop13Component } from './workshops/workshop13/workshop13.component';
 import { NavbarComponent } from './ui/components/navbar/navbar.component';
+import { TemplateFormsComponent } from './experiments/template-forms/template-forms.component';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,7 @@ import { NavbarComponent } from './ui/components/navbar/navbar.component';
     RouterOutlet,
     CustomDirectivesComponent,
     Workshop13Component,
+    TemplateFormsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
