@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 export interface UserEdit {
   firstName: string;
@@ -9,15 +10,26 @@ export interface UserEdit {
 @Component({
   selector: 'app-user-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './user-form.component.html',
   styleUrl: './user-form.component.css',
 })
 export class UserFormComponent {
+  user: UserEdit = {
+    firstName: '',
+    lastName: '',
+    email: '',
+  };
+
   @Output()
   edit = new EventEmitter<UserEdit>();
 
-  onSubmit(firstName: string, lastName: string, email: string) {
-    this.edit.emit({ firstName, lastName, email });
+  onSubmit() {
+    this.edit.emit(this.user);
+    this.user = {
+      firstName: '',
+      lastName: '',
+      email: '',
+    };
   }
 }

@@ -1,12 +1,10 @@
 import { Routes } from '@angular/router';
-import { Workshop08Component } from './workshops/workshop08/workshop08.component';
-import { Workshop10Component } from './workshops/workshop10/workshop10.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { inject } from '@angular/core';
-import { UserService } from './services/user-http.service';
+import { isAuthenticatedGuard } from './core/guards/is-authenticated.guard';
 import { getUsersCountResolver } from './core/resolvers/get-users-count.resolver';
 import { LoginComponent } from './pages/login/login.component';
-import { isAuthenticatedGuard } from './core/guards/is-authenticated.guard';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { Workshop10Component } from './workshops/workshop10/workshop10.component';
+import { Workshop14Component } from './workshops/workshop14/workshop14.component';
 
 function hasAdminRole() {
   return true;
@@ -28,7 +26,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    component: Workshop08Component,
+    component: Workshop14Component,
     canActivate: [isAuthenticatedGuard],
   },
   {

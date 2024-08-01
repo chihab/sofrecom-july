@@ -1,42 +1,45 @@
-<form>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
   <div class="mb-3">
     <label for="firstName" class="form-label">First Name</label>
     <input
+      [(ngModel)]="user.firstName"
       type="text"
       class="form-control"
       id="firstName"
       name="firstName"
       required
-      #firstName
+      pattern="[a-zA-Z]+"
     />
   </div>
   <div class="mb-3">
     <label for="lastName" class="form-label">Last Name</label>
     <input
+      [(ngModel)]="user.lastName"
       type="text"
       class="form-control"
       id="lastName"
       name="lastName"
       required
-      #lastName
+      pattern="[a-zA-Z]+"
     />
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input
+      [(ngModel)]="user.email"
       type="email"
       class="form-control"
       id="email"
       name="email"
       required
-      #email
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+      #email="ngModel"
     />
+    <!-- @if(form.controls['email'] && form.controls['email'].hasError('pattern')) { -->
+    @if(email.invalid && email.touched) {
+    <div class="form-text">Email is invalid</div>
+    }
   </div>
-  <button
-    type="button"
-    class="btn btn-primary"
-    (click)="onSubmit(firstName.value, lastName.value, email.value)"
-  >
-    Validate
-  </button>
+  <button class="btn btn-primary" [disabled]="form.invalid">Validate</button>
+  <button type="reset" class="btn btn-secondary">Reset</button>
 </form>
