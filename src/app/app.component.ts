@@ -10,6 +10,7 @@ import { Workshop09Component } from './workshops/workshop09/workshop09.component
 import { RouterComponent } from './experiments/router/router.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './ui/navbar/navbar.component';
+import { CustomDirectivesComponent } from './experiments/custom-directives/custom-directives.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { NavbarComponent } from './ui/navbar/navbar.component';
     // RouterComponent,
     RouterOutlet,
     NavbarComponent,
+    CustomDirectivesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
