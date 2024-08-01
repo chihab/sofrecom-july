@@ -9,8 +9,9 @@ import { Workshop08Component } from './workshops/workshop08/workshop08.component
 import { Workshop09Component } from './workshops/workshop09/workshop09.component';
 import { RouterComponent } from './experiments/router/router.component';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './ui/navbar/navbar.component';
 import { CustomDirectivesComponent } from './experiments/custom-directives/custom-directives.component';
+import { Workshop13Component } from './workshops/workshop13/workshop13.component';
+import { NavbarComponent } from './ui/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -25,9 +26,10 @@ import { CustomDirectivesComponent } from './experiments/custom-directives/custo
     // Workshop08Component,
     // Workshop09Component,
     // RouterComponent,
-    RouterOutlet,
     NavbarComponent,
+    RouterOutlet,
     CustomDirectivesComponent,
+    Workshop13Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { DatePipe, TitleCasePipe } from '@angular/common';
-import { FormatPipes } from '../../ui/FormatUtils';
+import { FormatPipes } from '../../ui/pipes/FormatUtils';
 
 @Component({
   selector: 'app-inputs',

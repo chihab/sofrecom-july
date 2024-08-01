@@ -6,7 +6,7 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import { AlertComponent } from '../../../ui/alert/alert.component';
+import { AlertComponent } from '../../../ui/components/alert/alert.component';
 
 @Directive({
   selector: '[appSample]',

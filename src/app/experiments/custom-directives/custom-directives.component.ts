@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SampleDirective } from './sample/sample.directive';
-import { AlertComponent } from '../../ui/alert/alert.component';
+import { AlertComponent } from '../../ui/components/alert/alert.component';
 
 @Component({
   selector: 'app-custom-directives',

@@ -1,6 +1,5 @@
 import { NgClass, NgIf, NgStyle } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { AlertComponent } from '../../ui/alert/alert.component';
 import { User } from '../../core/models/user.model';
 import { InputsComponent } from '../../experiments/inputs/inputs.component';
 import {
@@ -10,6 +9,7 @@ import {
 import { UsersComponent } from '../../core/components/users/users.component';
 import { UserService } from '../../services/user.service';
 import { LogService } from '../../services/log.service';
+import { AlertComponent } from '../../ui/components/alert/alert.component';
 
 @Component({
   selector: 'app-workshop06',
