@@ -2,6 +2,8 @@ import { Injectable, inject } from '@angular/core';
 import { User } from '../core/models/user.model';
 import { LogService } from './log.service';
 
+// RooInjectInstance = {UserService: new UserService()}
+
 @Injectable({
   providedIn: 'root',
 })

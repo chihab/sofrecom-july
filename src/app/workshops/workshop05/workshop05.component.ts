@@ -26,11 +26,8 @@ import { AlertComponent } from '../../ui/components/alert/alert.component';
   ],
   providers: [
     Workshop05Service,
-    UserService,
-    {
-      provide: LogService,
-      useFactory: () => {},
-    },
+    // UserService, // workshop05InjectorInstances  = { UserService: new UserService() }
+    // { provide: UserService, useClass: UserService },
   ],
   templateUrl: './workshop05.component.html',
   styleUrl: './workshop05.component.css',
