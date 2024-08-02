@@ -52,3 +52,5 @@ export class Workshop14Component {
     }
   }
 }
+
+export interface IUser {}

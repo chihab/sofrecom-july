@@ -14,7 +14,7 @@ import { Workshop13Component } from './workshops/workshop13/workshop13.component
 import { NavbarComponent } from './ui/components/navbar/navbar.component';
 import { TemplateFormsComponent } from './experiments/template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './experiments/reactive-forms/reactive-forms.component';
-
+import { NgProgressComponent, NgProgressModule } from 'ngx-progressbar';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -34,6 +34,7 @@ import { ReactiveFormsComponent } from './experiments/reactive-forms/reactive-fo
     Workshop13Component,
     TemplateFormsComponent,
     ReactiveFormsComponent,
+    NgProgressComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

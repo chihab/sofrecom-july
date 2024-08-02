@@ -4,7 +4,6 @@ import { getUsersCountResolver } from './core/resolvers/get-users-count.resolver
 import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { Workshop10Component } from './workshops/workshop10/workshop10.component';
-import { Workshop14Component } from './workshops/workshop14/workshop14.component';
 
 function hasAdminRole() {
   return true;
@@ -26,7 +25,13 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    component: Workshop14Component,
+    // component: Workshop14Component,
+    loadComponent: () =>
+      import('./workshops/workshop14/workshop14.component').then(
+        (m) => m.Workshop14Component
+      ),
+
+    // loadComponent = download ./workshop14.component.js, load it and return the component
     canActivate: [isAuthenticatedGuard],
   },
   {
